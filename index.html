@@ -3,150 +3,128 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Accounting Firm GTM Kit for Kick, built by Anvik Shah</title>
-  <meta name="description" content="Independent GTM kit by Anvik Shah: a scored list of 23 verified U.S. accounting firms, a sample lender-ready P&L, and an outbound sequence for Kick.">
-  <style>
-    :root {
-      --ink: #1a1a1a;
-      --muted: #5c6570;
-      --paper: #fbfaf7;
-      --card: #ffffff;
-      --line: #d8d3c8;
-      --navy: #1b2a4a;
-      --accent: #1b2a4a;
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      font-family: Georgia, "Times New Roman", Times, serif;
-      color: var(--ink);
-      background: var(--paper);
-      line-height: 1.55;
-    }
-    header, main, footer { width: min(760px, calc(100% - 40px)); margin: 0 auto; }
-    header { padding: 64px 0 28px; }
-    .kicker {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0 0 12px;
-    }
-    h1 {
-      font-size: clamp(28px, 5vw, 40px);
-      line-height: 1.15;
-      font-weight: 600;
-      margin: 0 0 16px;
-      color: var(--navy);
-    }
-    .lede { font-size: 18px; color: var(--muted); margin: 0 0 28px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-    .btn {
-      display: inline-block;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 15px;
-      font-weight: 600;
-      text-decoration: none;
-      color: #fff;
-      background: var(--navy);
-      padding: 12px 18px;
-      border-radius: 8px;
-    }
-    .btn:hover { background: #121c33; }
-    .btn-quiet {
-      color: var(--navy);
-      background: transparent;
-      border: 1px solid var(--line);
-    }
-    .btn-quiet:hover { background: #fff; }
-    main { padding-bottom: 64px; }
-    section { margin: 36px 0; }
-    h2 {
-      font-size: 22px;
-      margin: 0 0 12px;
-      color: var(--navy);
-    }
-    p, li { font-size: 17px; }
-    ul { padding-left: 1.2em; }
-    li { margin: 8px 0; }
-    a { color: var(--navy); }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 20px 22px;
-    }
-    .grid { display: grid; gap: 12px; }
-    @media (min-width: 640px) {
-      .grid.three { grid-template-columns: 1fr 1fr 1fr; }
-    }
-    .grid h3 { margin: 0 0 8px; font-size: 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    .grid p { margin: 0; font-size: 15px; color: var(--muted); }
-    .note {
-      border-left: 3px solid var(--navy);
-      padding: 4px 0 4px 14px;
-      color: var(--muted);
-    }
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 24px 0 48px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-  </style>
+  <link rel="icon" href="data:,">
+  <title>Accounting Firm GTM Kit</title>
+  <meta name="description" content="Independent GTM kit by Anvik Shah: rank 23 verified accounting firms, edit a fictional lender-ready P&amp;L, estimate capacity, and copy a draft outreach sequence.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <p class="kicker">Independent work by Anvik Shah</p>
-    <h1>Accounting Firm GTM Kit for Kick</h1>
-    <p class="lede">A scored list of 23 verified U.S. accounting firms, a sample lender-ready monthly P&amp;L, and a short outbound sequence tied to Kick launches that were checked on Kick's public changelog.</p>
-    <div class="actions">
-      <a class="btn" href="Kick_Accounting_Firm_GTM_Kit.xlsx" download>Download the Excel workbook</a>
-      <a class="btn btn-quiet" href="https://www.linkedin.com/in/anvik-shah">Anvik Shah on LinkedIn</a>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner header-top">
+      <div>
+        <h1>Accounting Firm GTM Kit</h1>
+        <p class="header-lead">Rank 23 verified U.S. accounting firms, walk a fictional lender package, estimate capacity, and copy a draft sequence. The workbook stays available as a download.</p>
+      </div>
+      <a class="download" href="Kick_Accounting_Firm_GTM_Kit.xlsx" download>Download the workbook</a>
+    </div>
+    <div class="header-inner">
+      <nav class="tabs" role="tablist" aria-label="Kit">
+        <button type="button" role="tab" id="tab-firms" data-tab="firms" aria-selected="true" aria-controls="panel-firms">Firm Prioritizer</button>
+        <button type="button" role="tab" id="tab-pnl" data-tab="pnl" aria-selected="false" tabindex="-1" aria-controls="panel-pnl">Lender-ready P&amp;L</button>
+        <button type="button" role="tab" id="tab-roi" data-tab="roi" aria-selected="false" tabindex="-1" aria-controls="panel-roi">Firm ROI</button>
+        <button type="button" role="tab" id="tab-outreach" data-tab="outreach" aria-selected="false" tabindex="-1" aria-controls="panel-outreach">Outreach</button>
+      </nav>
     </div>
   </header>
-  <main>
-    <section>
-      <h2>Why this exists</h2>
-      <p>Firms that close books for startups and SMBs still rebuild the same lender or board package in a spreadsheet, client by client. On November 6, 2026 Kick launched a <a href="https://www.kick.co/changelog/report-editor">report editor with firm templates</a>, so a team can set a standard once and reuse it. This kit turns that launch into a prospecting tool a sales leader can open on Monday.</p>
+  <main id="main" class="wrap">
+    <section id="panel-firms" data-panel="firms" role="tabpanel" aria-labelledby="tab-firms">
+      <div id="weights" class="weight-grid"></div>
+      <div class="actions">
+        <button class="btn quiet" id="reset-weights" type="button">Reset weights to 1</button>
+      </div>
+      <div class="filters">
+        <label class="field">Search
+          <input id="search" type="search" placeholder="Firm, city, signal, or angle" autocomplete="off">
+        </label>
+        <label class="field">State
+          <select id="filter-state" aria-label="Filter by state"></select>
+        </label>
+        <label class="field">Firm size
+          <select id="filter-size" aria-label="Filter by firm size"></select>
+        </label>
+        <label class="field">Niche
+          <select id="filter-niche" aria-label="Filter by niche"></select>
+        </label>
+        <button class="btn" id="export-csv" type="button">Export CSV</button>
+        <button class="btn quiet" id="reset-filters" type="button">Reset filters</button>
+      </div>
+      <p class="count" id="firm-count">Loading the 23 firms…</p>
+      <p class="note">State is read from the HQ cell when a state abbreviation is there. Firm size is Not published unless that firm’s signal states a people count. Niche is the Segment column. Nothing here is filled in beyond the workbook.</p>
+      <div id="firm-list" class="firm-list"></div>
     </section>
-    <section>
-      <h2>What you get in the workbook</h2>
-      <div class="grid three">
-        <div class="card">
-          <h3>Firm Leads</h3>
-          <p>23 real firms with 0/1 rubric scores, editable weights, SUMPRODUCT weighted scores, RANK, source URLs, signals, and suggested angles. Filter and sort in Excel.</p>
+
+    <section id="panel-pnl" data-panel="pnl" role="tabpanel" aria-labelledby="tab-pnl" hidden>
+      <div class="banner">Example data
+        <span>Harborline Robotics LLC is fictional. These numbers are not a client, an audit, or a Kick screen. White fields are editable. Gross margin, EBITDA, debt service, DSCR, and runway recompute from the workbook formulas.</span>
+      </div>
+      <div class="pnl-scroll">
+        <table class="pnl" id="pnl-table"></table>
+      </div>
+      <p class="note">Swipe sideways on a small screen. The line names stay put. Debt service is interest plus principal. Runway is cash divided by the absolute net cash flow when cash flow is negative, and “Cash-flow positive” when it is not.</p>
+      <div class="actions">
+        <button class="btn quiet" id="reset-pnl" type="button">Restore example numbers</button>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <h2>EBITDA and gross margin</h2>
+          <div class="plot"><canvas id="chart-margin"></canvas></div>
         </div>
-        <div class="card">
-          <h3>Sample Lender P&amp;L</h3>
-          <p>Fictional Harborline Robotics LLC, marked SAMPLE DATA. Blue inputs and black formulas for gross profit, margin, EBITDA, debt service, DSCR, and cash runway.</p>
-        </div>
-        <div class="card">
-          <h3>Outbound and sources</h3>
-          <p>Three emails plus a LinkedIn touch, with day and channel. A Sources tab lists every Kick changelog and docs URL that was verified.</p>
+        <div class="chart-card">
+          <h2>DSCR and cash runway</h2>
+          <div class="plot"><canvas id="chart-lender"></canvas></div>
         </div>
       </div>
     </section>
-    <section>
-      <h2>Launches this kit is tied to</h2>
-      <ul>
-        <li><a href="https://www.kick.co/changelog/report-editor">November 6, 2026: report editor and firm templates</a></li>
-        <li><a href="https://www.kick.co/changelog">October 30: checks and deposits</a></li>
-        <li><a href="https://www.kick.co/changelog">October 16: Chart of Accounts editor and accountant CoA templates</a></li>
-        <li><a href="https://www.kick.co/changelog">October 9: continuous revenue recognition</a></li>
-        <li><a href="https://www.kick.co/changelog">October 1: free invoicing</a></li>
-        <li><a href="https://www.kick.co/changelog">September 24: multi-entity consolidation and Ownership Canvas</a></li>
-      </ul>
-      <p>Kick already has an <a href="https://www.kick.co/accountants">accountants page</a>, a <a href="https://docs.kick.co/referrals-and-partnerships/partner-program">Partner Program</a>, and <a href="https://docs.kick.co/accountants/reference/plan-comparison-guide">per-client accountant pricing</a>.</p>
+
+    <section id="panel-roi" data-panel="roi" role="tabpanel" aria-labelledby="tab-roi" hidden>
+      <div class="roi-grid">
+        <form class="sheet" id="roi-form">
+          <h2>Assumptions</h2>
+          <label class="field">Client count
+            <span class="hint">Editable assumption</span>
+            <input id="roi-clients" data-roi type="number" min="0" step="1" value="25">
+          </label>
+          <label class="field">Hours per monthly close
+            <span class="hint">Editable assumption</span>
+            <input id="roi-hours" data-roi type="number" min="0" step="0.5" value="8">
+          </label>
+          <label class="field">Hours saved
+            <span class="hint">Editable assumption, percent of close hours</span>
+            <input id="roi-saved" data-roi type="number" min="0" max="100" step="1" value="30">
+          </label>
+          <label class="field">Billing rate, $ per hour
+            <span class="hint">Editable assumption</span>
+            <input id="roi-rate" data-roi type="number" min="0" step="1" value="150">
+          </label>
+          <label class="field">Kick price per client, $ per month
+            <span class="hint">Editable assumption. Not a Kick price.</span>
+            <input id="roi-price" data-roi type="number" min="0" step="1" value="40">
+          </label>
+        </form>
+        <div class="sheet">
+          <h2>From those assumptions</h2>
+          <table class="result" id="roi-results"></table>
+          <p class="docs">Annual hours saved = clients × hours per close × saved % × 12. Capacity freed = those hours × billing rate. Annual cost = clients × monthly price × 12. Net benefit = capacity freed − annual cost. Net ROI = net benefit ÷ annual cost. Break-even price is the monthly per-client amount that makes net benefit zero. Break-even hours saved is the percentage that covers the assumed cost.</p>
+          <p class="docs">Kick’s public plan comparison lists accountant per-client prices of Free, Basic $20, Plus $50, and Advanced $150, plus an Accountant AI Program with custom pricing. That page is the source for those figures. The $40 in the field above is not one of them. <a href="https://docs.kick.co/accountants/reference/plan-comparison-guide">Plan comparison guide</a>.</p>
+        </div>
+      </div>
     </section>
-    <section class="note">
-      <p>Independent work by Anvik Shah, not affiliated with Kick. Sample data labeled. This page does not use Kick's logo and does not speak for Kick.</p>
+
+    <section id="panel-outreach" data-panel="outreach" role="tabpanel" aria-labelledby="tab-outreach" hidden>
+      <div class="banner">Draft copy only
+        <span>Nothing in this sequence has been sent. Rewrite it before anyone uses it. Replace the LinkedIn bracket with a signal from the firm’s source page. No private email addresses or phone numbers are included.</span>
+      </div>
+      <div id="touches" class="touch-grid"></div>
     </section>
   </main>
-  <footer>
-    Built by Anvik Shah for Kick. Independent work, not affiliated. Sources linked.
-    <a href="https://www.linkedin.com/in/anvik-shah">www.linkedin.com/in/anvik-shah</a>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Independent work by Anvik Shah. Not affiliated with or endorsed by Kick.</p>
+      <p><a href="https://www.linkedin.com/in/anvik-shah">Anvik Shah on LinkedIn</a></p>
+    </div>
   </footer>
+  <script src="vendor/chart.umd.min.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>

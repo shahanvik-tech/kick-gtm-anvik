@@ -6,6 +6,19 @@ Download the workbook: [Kick_Accounting_Firm_GTM_Kit.xlsx](Kick_Accounting_Firm_
 
 GitHub Pages: [https://shahanvik-tech.github.io/kick-gtm-anvik/](https://shahanvik-tech.github.io/kick-gtm-anvik/)
 
+## The web app
+
+`index.html` is a static app served by GitHub Pages. There is no build step. Open the Pages URL, or open `index.html` through a local server so it can fetch `data/firms.json`.
+
+Four tabs:
+
+1. **Firm Prioritizer.** Weight sliders for the five rubric criteria re-rank all 23 firms. Filters cover state, firm size, and niche, plus search. Click a firm for its sub-scores, the workbook’s signal, the suggested angle, and source links. Export CSV downloads the current filtered view.
+2. **Lender-ready P&L.** Monthly inputs start from the fictional Harborline Robotics sample and recompute gross margin, EBITDA, DSCR, and runway, with charts. The panel is marked example data.
+3. **Firm ROI.** Client count, hours per close, hours saved, billing rate, and a per-client price. Every default is labeled as an editable assumption. Output is annual hours saved, capacity freed, net ROI, and break-even. The $40 starting price is not a Kick price. Published accountant prices are cited only from Kick’s [plan comparison guide](https://docs.kick.co/accountants/reference/plan-comparison-guide).
+4. **Outreach.** The three emails and the LinkedIn note from the workbook, each with a copy button.
+
+`data/firms.json` is extracted from the workbook. State is read from the HQ cell when a U.S. state abbreviation is present, otherwise the app shows Not published. Firm size is Not published unless the Why-now signal states that firm’s own people count. Niche is the Segment column. The app does not add firms, scores, or locations that are not in the sheet.
+
 ## The problem
 
 Accounting firms that serve startups and SMBs still rebuild the same monthly package for lenders, boards, and buyers. The layout, logo, disclaimer, and KPI header get copied into a new spreadsheet for every client, every month. That work does not scale, and it is exactly the job firm report templates are meant to take off a reviewer's plate.
